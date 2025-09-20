@@ -47,7 +47,6 @@ source venv/bin/activate
 
 # Clone the repository:
 git clone https://github.com/BhaavanDV/TalentIQ.git
-cd TalentIQ
 
 # Install dependencies:
 pip install -r requirements.txt
@@ -58,6 +57,9 @@ Once all dependencies are installed, you can launch the application from your te
 
 streamlit run app.py
 This will start a local server and automatically open the application in your web browser.
+
+# PROJECT REPOSITORY: 
+https://github.com/BhaavanDV/TalentIQ.git
 
 
 📜 License
