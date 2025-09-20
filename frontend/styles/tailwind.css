@@ -1,0 +1,151 @@
+/* Tailwind-like Custom CSS for Streamlit */
+<style>
+    /* Base styles */
+    .stApp {
+        background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%);
+    }
+
+    /* Typography */
+    h1, h2, h3 {
+        color: #E2E8F0;
+        font-weight: bold;
+        letter-spacing: -0.025em;
+    }
+
+    .text-gradient {
+        background: linear-gradient(120deg, #60A5FA 0%, #A78BFA 50%, #F472B6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    /* Components */
+    .card {
+        @apply bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300;
+    }
+
+    .dashboard-card {
+        @apply bg-gray-800/50 backdrop-blur-lg rounded-lg p-4 border border-gray-700;
+    }
+
+    .metric-card {
+        @apply bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-4 shadow-lg;
+    }
+
+    .btn-primary {
+        @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg 
+               transition-all duration-300 shadow-lg hover:shadow-xl;
+    }
+
+    .btn-secondary {
+        @apply bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg
+               transition-all duration-300;
+    }
+
+    /* Custom Streamlit Elements */
+    .stTextInput > div > div {
+        @apply bg-gray-800 border-gray-700 rounded-lg;
+    }
+
+    .stTextInput > div > div:focus-within {
+        @apply border-blue-500 ring-2 ring-blue-500/20;
+    }
+
+    .stSelectbox > div > div {
+        @apply bg-gray-800 border-gray-700 rounded-lg text-white;
+    }
+
+    /* File uploader */
+    .upload-box {
+        @apply border-2 border-dashed border-gray-600 rounded-xl p-8 text-center
+               hover:border-blue-500 transition-all duration-300 cursor-pointer
+               bg-gray-800/50 backdrop-blur-lg;
+    }
+
+    /* Charts and Visualizations */
+    .chart-container {
+        @apply bg-gray-800/50 backdrop-blur-lg rounded-xl p-4 border border-gray-700
+               hover:shadow-lg transition-all duration-300;
+    }
+
+    /* Sidebar */
+    .css-1d391kg {
+        @apply bg-gray-900 border-r border-gray-700;
+    }
+
+    /* Animations */
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+
+    .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-gray-800;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-gray-600 rounded-full hover:bg-gray-500;
+    }
+
+    /* Progress Bars */
+    .progress-bar {
+        @apply bg-gray-700 rounded-full h-2 overflow-hidden;
+    }
+
+    .progress-bar-fill {
+        @apply bg-gradient-to-r from-blue-500 to-purple-500 h-full transition-all duration-500;
+    }
+
+    /* Badges */
+    .badge {
+        @apply px-2 py-1 rounded-full text-xs font-semibold;
+    }
+
+    .badge-blue {
+        @apply bg-blue-500/20 text-blue-300;
+    }
+
+    .badge-green {
+        @apply bg-green-500/20 text-green-300;
+    }
+
+    /* Glass Morphism */
+    .glass {
+        @apply bg-white/10 backdrop-blur-lg rounded-xl border border-white/20;
+    }
+
+    /* Tooltips */
+    .tooltip {
+        @apply relative inline-block;
+    }
+
+    .tooltip-text {
+        @apply invisible absolute z-10 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg
+               opacity-0 transition-opacity duration-300 -translate-y-2;
+    }
+
+    .tooltip:hover .tooltip-text {
+        @apply visible opacity-100 transform translate-y-0;
+    }
+
+    /* Custom KPI Cards */
+    .kpi-card {
+        @apply bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6
+               border border-gray-700 hover:border-blue-500/50 transition-all duration-300
+               shadow-lg hover:shadow-xl;
+    }
+
+    /* Responsive Grid */
+    .grid-auto-fit {
+        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+    }
+</style>""")

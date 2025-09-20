@@ -1,0 +1,16 @@
+[theme]
+primaryColor = "#6366F1"  # Indigo-500
+backgroundColor = "#0F172A"  # Slate-900
+secondaryBackgroundColor = "#1E1B4B"  # Indigo-900
+textColor = "#E2E8F0"  # Slate-200
+font = "Inter"
+
+[server]
+enableCORS = true
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false
+
+[logger]
+level = "INFO"

@@ -1,0 +1,68 @@
+[tool.poetry]
+name = "talentiq"
+version = "1.0.0"
+description = "AI-powered resume evaluation and job matching system"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.0"
+black = "^23.7.0"
+isort = "^5.12.0"
+flake8 = "^6.1.0"
+mypy = "^1.5.0"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = [
+    "pydantic.*",
+    "fastapi.*",
+    "sqlalchemy.*",
+    "alembic.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --cov=app"
+testpaths = [
+    "tests",
+]
