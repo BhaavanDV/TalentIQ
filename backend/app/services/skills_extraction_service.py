@@ -48,10 +48,7 @@ class SkillsExtractionService:
         return matcher
 
     async def extract_skills(self, text: str) -> Dict[str, List[str]]:
-        """
-        Extract skills from text using NLP and pattern matching
-        Returns a dictionary of skill categories and matched skills
-        """
+    
         doc = self.nlp(text)
         matches = self.matcher(doc)
         
@@ -75,10 +72,7 @@ class SkillsExtractionService:
         }
 
     async def extract_experience_levels(self, text: str) -> Dict[str, str]:
-        """
-        Extract experience levels for identified skills
-        Returns a dictionary of skills and their experience levels
-        """
+     
         # Simple pattern matching for years of experience
         experience_patterns = [
             r"(\d+)[\+]?\s*(?:years?|yrs?).+?experience.+?(?:with|in|using)?\s+([A-Za-z0-9#\+]+)",

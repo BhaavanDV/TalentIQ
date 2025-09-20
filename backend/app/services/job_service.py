@@ -54,7 +54,7 @@ class JobService:
             
         # If description is updated, re-extract skills
         if job_in.description:
-            skills = await self.skills_extractor.extract_skills(job_in.description)
+            skills =  self.skills_extractor.extract_skills(job_in.description)
             job_in.required_skills = skills
             
         return self.repository.update(self.db, id=job_id, obj_in=job_in)
