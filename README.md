@@ -32,7 +32,7 @@ Ranking: Finally, the resumes are ranked and displayed in a user-friendly interf
 🚀 Getting Started
 Follow these instructions to get a copy of the project up and running on your local machine.
 
-Prerequisites
+# Prerequisites
 You need to have Python installed on your system. It's recommended to use a virtual environment.
 
 # Create a virtual environment
@@ -45,16 +45,15 @@ venv\Scripts\activate
 source venv/bin/activate
 
 
-Clone the repository:
-
+# Clone the repository:
 git clone https://github.com/BhaavanDV/TalentIQ.git
 cd TalentIQ
 
-Install dependencies:
+# Install dependencies:
 pip install -r requirements.txt
 Note: The requirements.txt file must contain all the project's dependencies, such as streamlit, scikit-learn, PyPDF2, python-docx, etc.
 
-Running the App
+# Running the App
 Once all dependencies are installed, you can launch the application from your terminal:
 
 streamlit run app.py
