@@ -46,6 +46,7 @@ source venv/bin/activate
 
 
 Clone the repository:
+
 git clone https://github.com/BhaavanDV/TalentIQ.git
 cd TalentIQ
 
@@ -59,14 +60,7 @@ Once all dependencies are installed, you can launch the application from your te
 streamlit run app.py
 This will start a local server and automatically open the application in your web browser.
 
-📂 Project Structure
-.
-├── app.py                     # Main Streamlit application script
-├── requirements.txt           # List of project dependencies
-├── README.md                  # This file
-├── assets/                    # Optional: For images, icons, etc.
-│   └── project-screenshot.png
-└── data/                      # Optional: For sample data or pre-trained models
+
 📜 License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
